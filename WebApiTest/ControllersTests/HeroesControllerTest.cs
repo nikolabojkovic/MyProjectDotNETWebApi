@@ -67,6 +67,7 @@ namespace WebApiTest
 
             var result = _unitOfWork.Heroes.Find(o => o.Id == 2).SingleOrDefault() as Hero;
             Assert.AreEqual(result, null);
+            Assert.AreEqual(((InMemoryUnitOfWork)_unitOfWork).Commited, true);
         }
     }
 }
