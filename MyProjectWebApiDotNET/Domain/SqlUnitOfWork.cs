@@ -10,9 +10,9 @@ namespace MyProjectWebApiDotNET.Domain
         private DbContext _dbContext;
         private SqlRepository<Hero> _heroes;
 
-        public SqlUnitOfWork(DbContext dbContext)
+        public SqlUnitOfWork()
         {
-            _dbContext = dbContext;
+            _dbContext = new Context();
         }
 
         public IRepository<Hero> Heroes

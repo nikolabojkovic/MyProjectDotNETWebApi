@@ -15,11 +15,6 @@ namespace MyProjectWebApiDotNET.Controllers
     {
         private IUnitOfWork _unitOfWork;
 
-        public HeroesController()
-        {
-            _unitOfWork = new SqlUnitOfWork(new Context()); // this should be injected in contructor
-        }
-
         public HeroesController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
