@@ -1,32 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace MyProjectWebApiDotNET.Controllers
 {
-    public class PortfolioController : Controller
+    public class HomeController : Controller
     {
-        // GET: Portfolio
+        // GET: Home
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: Portfolio/Details/5
+        // GET: Home/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Portfolio/Create
+        // GET: Home/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Portfolio/Create
+        // POST: Home/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -42,13 +38,13 @@ namespace MyProjectWebApiDotNET.Controllers
             }
         }
 
-        // GET: Portfolio/Edit/5
+        // GET: Home/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Portfolio/Edit/5
+        // POST: Home/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -64,13 +60,13 @@ namespace MyProjectWebApiDotNET.Controllers
             }
         }
 
-        // GET: Portfolio/Delete/5
+        // GET: Home/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Portfolio/Delete/5
+        // POST: Home/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

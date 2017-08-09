@@ -1,12 +1,7 @@
-﻿using MyProjectWebApiDotNET.Domain;
-using MyProjectWebApiDotNET.Interfaces;
+﻿using MyProjectWebApiDotNET.Interfaces;
 using MyProjectWebApiDotNET.Models;
-using Newtonsoft.Json.Linq;
-using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Web.Http;
-using System.Web.Http.Cors;
 
 namespace MyProjectWebApiDotNET.Controllers
 {
@@ -22,7 +17,7 @@ namespace MyProjectWebApiDotNET.Controllers
 
         [Route("")]
         [HttpGet]
-        public IHttpActionResult Get ()
+        public IHttpActionResult Get()
         {
             if (_unitOfWork.Heroes.FindAll().Count() == 0)
                 return NotFound();

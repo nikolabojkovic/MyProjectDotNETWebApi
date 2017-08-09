@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace MyProjectWebApiDotNET.App_Start
 {
@@ -12,12 +13,14 @@ namespace MyProjectWebApiDotNET.App_Start
         {
             // TODO: Add any additional configuration code.
 
+            // allowing acces to front end
+            config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
             // web API routes
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
                 name : "DefaultApi",
-                routeTemplate: "{controller}/{id}",
+                routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional });
         }
     }

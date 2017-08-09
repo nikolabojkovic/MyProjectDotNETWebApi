@@ -1,8 +1,9 @@
 ﻿using MyProjectWebApiDotNET.App_Start;
-using Newtonsoft.Json.Serialization;
+using System.Web.Mvc;
+using System.Web.Routing;
+using System.Web.Optimization;
 using System;
 using System.Web.Http;
-using System.Web.Http.Cors;
 
 namespace MyProjectWebApiDotNET
 {
@@ -10,8 +11,11 @@ namespace MyProjectWebApiDotNET
     {
         protected void Application_Start(object sender, EventArgs e)
         {
-            GlobalConfiguration.Configuration.EnableCors(new EnableCorsAttribute("*", "*", "*"));
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            AreaRegistration.RegisterAllAreas();
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 
         protected void Session_Start(object sender, EventArgs e)
