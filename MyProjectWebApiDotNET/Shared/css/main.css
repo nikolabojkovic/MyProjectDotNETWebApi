@@ -6,7 +6,7 @@
 **************************/
 
 body {
-  background: #fff;
+  background: black;
   font-family: 'Open Sans', sans-serif;
   color:#4e4e4e;
   line-height: 22px;
@@ -370,6 +370,14 @@ input.search-form:hover {
 .navbar-inverse .navbar-form {
   border-top: 0;
   padding-bottom: 0;
+}
+
+body p, body li, body span, body h4 {
+    color: white;
+}
+
+body p {
+    text-align: justify;
 }
 
 
@@ -1544,7 +1552,15 @@ ul.social_icons li  a i{
     background-image: url("../images/image_bg.png");
     background-position: center 118px;
     background-repeat: no-repeat;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+}
+
+.clients-portfolio {
+    background-image: url("../images/image_bg.png");
+    background-position: center 240px;
+    background-repeat: no-repeat;
+    margin-top: 100px;
+    margin-bottom: 30px;
 }
 
 .clients-comments img {
@@ -2637,4 +2653,14 @@ img
 #comments
 {
     margin-left : 50px;
+}
+
+.portfolio-title {
+    padding: 120px 0px 30px 0px;
+}
+
+@media (max-width: 768px) {
+    .portfolio-title {
+        padding: 0px 0px 30px 0px;
+    }
 }
