@@ -1,10 +1,6 @@
-﻿using MyProjectWebApiDotNET.App_Start;
-using MyProjectWebApiDotNET.Models;
-using System;
-using System.Collections.Generic;
+﻿using MyProjectWebApiDotNET.Models;
 using System.Configuration;
 using System.Data.Entity;
-using System.Linq;
 using System.Web;
 
 namespace MyProjectWebApiDotNET.Domain
@@ -12,7 +8,7 @@ namespace MyProjectWebApiDotNET.Domain
     public class Context : DbContext
     {
         // local server db connection string 
-         public Context() : base (WebApiConfig.DbConnectionString) { }
+         public Context() : base (ConfigurationManager.ConnectionStrings[HttpContext.Current.Request.Url.Host].ConnectionString) { }
         public DbSet<Hero> Heroes { get; set; }
     }
 }
